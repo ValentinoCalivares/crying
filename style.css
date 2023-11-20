@@ -1,0 +1,57 @@
+/*para activar grid, se aplica display grid en el contenedor padre*/
+
+.grid-container {
+ 
+    /* activa grid */
+    display: grid;
+
+
+    /* definimos filas */
+grid-template-rows: repeat(3, 150px);
+
+
+/* definimos columnas */
+grid-template-columns: repeat(3, 1fr);
+border: 3px solid black;
+ 
+
+/* espacio entre celdas */
+ gap: 10px;
+ 
+ 
+ /* areas */
+ grid-template-areas: " header header header"
+ "productos productos banner"
+ "productos productos banner"
+ "footer footer footer";
+}
+
+.header {
+    grid-area: header;
+}
+
+.grid-it {
+ 
+   border: 1px solid black;
+}
+
+/* pseudoclase :first-child */
+
+.grid-it:first-child {
+    /* empiece y termine en una columna especifica */
+
+  /*   grid-column-start: 1;
+    grid-column-end: 3; */
+    grid-column: 1 / 3;
+    /* grid-column: 1 / span 3; */
+    
+    /* grid-row-start: 1;
+    grid-row-end: 3; */
+    grid-row: 1 / 3; 
+   /*  grid-row: 1 / span 3; */
+
+    /* span le dice al css que ocupe columnas y filas */
+
+
+
+}
